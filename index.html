@@ -6,6 +6,7 @@
     <title>Federico Brooks | Product Management Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
@@ -139,65 +140,75 @@
     <section class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12">Key Achievements</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- First Row -->
-                <div class="bg-gray-50 p-6 rounded-xl card-hover">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-rocket text-3xl"></i>
+            <!-- Swiper Container -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="text-blue-600 mb-4">
+                            <i class="fas fa-rocket text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">0-to-1 Product Launches</h3>
+                        <p class="text-gray-600">
+                            Pioneered Preference Management from 0-to-1, defining product strategy that secured flagship customers with average contract value of $1.5M.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">0-to-1 Product Launches</h3>
-                    <p class="text-gray-600">
-                        Pioneered Preference Management from 0-to-1, defining product strategy that secured flagship customers with average contract value of $1.5M.
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl card-hover">
-                    <div class="text-green-600 mb-4">
-                        <i class="fas fa-chart-line text-3xl"></i>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="text-green-600 mb-4">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">$7M+ Portfolio ARR</h3>
+                        <p class="text-gray-600">
+                            Scaled a portfolio of 3 core data privacy and governance products to over $7M in ARR by expanding feature sets for enterprise use cases.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">$7M+ Portfolio ARR</h3>
-                    <p class="text-gray-600">
-                        Scaled a portfolio of 3 core data privacy and governance products to over $7M in ARR by expanding feature sets for enterprise use cases.
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl card-hover">
-                    <div class="text-purple-600 mb-4">
-                        <i class="fas fa-users text-3xl"></i>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="text-purple-600 mb-4">
+                            <i class="fas fa-users text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Enterprise Adoption</h3>
+                        <p class="text-gray-600">
+                            Led strategic rebuild of DSR Automation product resulting in 50% increase in NPS and 30% reduction in conversion time.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Enterprise Adoption</h3>
-                    <p class="text-gray-600">
-                        Led strategic rebuild of DSR Automation product resulting in 50% increase in NPS and 30% reduction in conversion time.
-                    </p>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-                <!-- Second Row -->
-                <div class="bg-gray-50 p-6 rounded-xl card-hover">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-rocket text-3xl"></i>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="text-red-600 mb-4">
+                            <i class="fas fa-shield-alt text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Automated Privacy Assessments</h3>
+                        <p class="text-gray-600">
+                            Built a product to simplify and improve Privacy, Security, and AI Assessments, streamlining compliance processes for enterprise customers.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Automated Privacy Assessments</h3>
-                    <p class="text-gray-600">
-                        Built a product to simplify and improve Privacy, Security, and AI Assessments, streamlining compliance processes for enterprise customers.
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl card-hover">
-                    <div class="text-green-600 mb-4">
-                        <i class="fas fa-cogs text-3xl"></i>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="text-yellow-600 mb-4">
+                            <i class="fas fa-cogs text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">DSR Workflows</h3>
+                        <p class="text-gray-600">
+                            Re-architected a Data Subject Request automation product to enable complex pipelines with efficient, scalable, and intuitive configurations.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">DSR Workflows</h3>
-                    <p class="text-gray-600">
-                        Re-architected a Data Subject Request automation product to enable complex pipelines with efficient, scalable, and intuitive configurations.
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl card-hover">
-                    <div class="text-purple-600 mb-4">
-                        <i class="fas fa-database text-3xl"></i>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide bg-gray-50 p-6 rounded-xl card-hover">
+                        <div class="text-indigo-600 mb-4">
+                            <i class="fas fa-database text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Preference Management</h3>
+                        <p class="text-gray-600">
+                            Developed a preference management tool capable of ingesting, tracking, and propagating millions of privacy preference choices daily at scale.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Preference Management</h3>
-                    <p class="text-gray-600">
-                        Developed a preference management tool capable of ingesting, tracking, and propagating millions of privacy preference choices daily at scale.
-                    </p>
                 </div>
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Swiper Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
     </section>
@@ -525,6 +536,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         // Mobile menu toggle
         document.getElementById('menu-toggle').addEventListener('click', function() {
@@ -605,6 +617,29 @@
                     link.classList.add('active-nav');
                 }
             });
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
         });
     </script>
 </body>
