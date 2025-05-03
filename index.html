@@ -54,6 +54,17 @@
             from, to { opacity: 1; }
             50% { opacity: 0; }
         }
+        .swiper-container {
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800 gradient-bg">
@@ -622,6 +633,10 @@
         // Initialize Swiper
         const swiper = new Swiper('.swiper-container', {
             loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -639,6 +654,10 @@
                 1024: {
                     slidesPerView: 3,
                 },
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
             },
         });
     </script>
