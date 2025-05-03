@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federico Brooks | Product Management Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: calc(100% - 24px);
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-nav::after {
+            width: 100%;
+        }
+        #typing-text::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 gradient-bg">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-semibold text-blue-600">Federico Brooks</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#experience" class="nav-link px-3 py-2 text-sm font-medium">Experience</a>
+                    <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium">Skills</a>
+                    <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="https://www.linkedin.com/in/federico-brooks" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4">
+            <div class="flex flex-col space-y-2">
+                <a href="#about" class="nav-link px-3 py-2 text-sm font-medium">About</a>
+                <a href="#experience" class="nav-link px-3 py-2 text-sm font-medium">Experience</a>
+                <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium">Skills</a>
+                <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium">Contact</a>
+                <div class="pt-2">
+                    <a href="https://www.linkedin.com/in/federico-brooks" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fab fa-linkedin text-xl"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-blue-600">Federico Brooks</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">
+                    <span id="typing-text">Staff Product Manager</span>
+                </h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Strategic Product Leader specializing in AI, Data Privacy, and Governance. 
+                    Adept at defining vision, launching 0-to-1 products, and scaling adoption 
+                    in enterprise markets ($7M+ portfolio ARR).
+                </p>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">AI Products</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Data Privacy</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">SaaS Security</span>
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Enterprise B2B</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                        Contact Me
+                    </a>
+                    <a href="#experience" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition duration-300">
+                        My Work
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full absolute -z-10 top-4 left-4"></div>
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                         alt="Federico Brooks" 
+                         class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Achievements -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Key Achievements</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-rocket text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">0-to-1 Product Launches</h3>
+                    <p class="text-gray-600">
+                        Pioneered Preference Management from 0-to-1, defining product strategy that secured flagship customers with average contract value of $1.5M.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">$7M+ Portfolio ARR</h3>
+                    <p class="text-gray-600">
+                        Scaled a portfolio of 3 core data privacy and governance products to over $7M in ARR by expanding feature sets for enterprise use cases.
+                    </p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Enterprise Adoption</h3>
+                    <p class="text-gray-600">
+                        Led strategic rebuild of DSR Automation product resulting in 50% increase in NPS and 30% reduction in conversion time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+        
+        <div class="relative">
+            <!-- Timeline -->
+            <div class="space-y-8">
+                <!-- Transcend -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-blue-100"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold">Transcend</h3>
+                            <span class="text-gray-500 text-sm">June 2023 - Present</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-blue-600 mb-3">Staff Product Manager - Data Privacy and Governance, AI products</h4>
+                        <div class="mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">Series B Startup</span>
+                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">Remote - Perugia, Italy</span>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Owned and scaled a portfolio of 3 core data privacy and governance products (Preference Management, DSR Automation, Data Inventory) to over $7M in ARR</li>
+                            <li>Pioneered Preference Management from 0-to-1, defining the product strategy to meet enterprise consent and access control needs, securing flagship customers (Universal Music Group, Costco, Notion) with average contract value of $1.5M</li>
+                            <li>Successfully launched the 0-to-1 Assessments product, securing 10+ large enterprise customers (incl. Reddit, Informa) within the first year</li>
+                            <li>Led strategic rebuild of DSR Automation product resulting in 50% increase in NPS and 30% reduction in conversion time</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Custodia -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-green-600 border-4 border-green-100"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold">Custodia Privacy Consulting SAGL</h3>
+                            <span class="text-gray-500 text-sm">August 2024 - Present</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-green-600 mb-3">Founder & Principal Consultant - AI Governance and Data Privacy</h4>
+                        <div class="mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">Consulting</span>
+                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">Remote - Perugia, Italy</span>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Established Custodia Privacy Consulting, providing expert AI Governance and Data Privacy solutions to technology companies</li>
+                            <li>Developed and delivered tailored consulting services, including AI impact assessments and data mapping/ROPA reporting</li>
+                            <li>Enabled clients to implement responsible AI practices and mitigate regulatory risks across US and EU regulations (e.g., GDPR)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- LiveRamp -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-purple-600 border-4 border-purple-100"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold">LiveRamp</h3>
+                            <span class="text-gray-500 text-sm">September 2021 - June 2023</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-purple-600 mb-3">Lead Product Manager - Data Privacy, Identity, and Data Governance</h4>
+                        <div class="mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">Public Company</span>
+                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">Remote - Cleveland, OH</span>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Led global, cross-functional teams to architect and deliver scalable API-based identity management and data privacy pipelines across Americas, EMEA, and APAC</li>
+                            <li>Drove strategic consolidation of 71 disparate team processes into a unified Pub/Sub-based system, improving data processing speeds by 50%</li>
+                            <li>Developed identity resolution API products and regionalized data stores, ensuring regulatory compliance (GDPR, CCPA)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Sherwin-Williams -->
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-yellow-600 border-4 border-yellow-100"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold">Sherwin-Williams</h3>
+                            <span class="text-gray-500 text-sm">March 2021 - September 2021</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-yellow-600 mb-3">Sr. Digital Product Manager - CBG Division</h4>
+                        <div class="mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-medium">Fortune 500</span>
+                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">Remote - Cleveland, OH</span>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Managed roadmap and delivery for core e-commerce platform features used by millions</li>
+                            <li>Coordinated dependencies across multiple large engineering and marketing divisions</li>
+                            <li>Contributed to digital transformation initiatives by defining requirements for integrating new vendor solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Enklu -->
+                <div class="relative pl-8">
+                    <div class="absolute left-0 top-0 w-4 h-4 rounded-full bg-red-600 border-4 border-red-100"></div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold">Enklu</h3>
+                            <span class="text-gray-500 text-sm">October 2018 - March 2021</span>
+                        </div>
+                        <h4 class="text-lg font-semibold text-red-600 mb-3">Sr. Product Manager - B2B Augmented Reality Products</h4>
+                        <div class="mb-4">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-medium">Seed Stage Startup</span>
+                            <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">San Francisco, CA</span>
+                        </div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Launched the company's first B2B Augmented Reality SaaS platform from 0-to-1 in an ambiguous market</li>
+                            <li>Defined the initial value proposition, roadmap, and pricing strategy as employee #6</li>
+                            <li>Secured and managed relationships with initial enterprise pilot customers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills & Expertise</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Management -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-tasks text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Product Management</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Product Strategy</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Roadmapping</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">0-to-1 Launches</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Enterprise SaaS</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">UCD</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Agile SDLC</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">A/B Testing</span>
+                    </div>
+                </div>
+                
+                <!-- Technical -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-code text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Technical</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">API Design</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Data Pipelines</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Identity Management</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Data Governance</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">System Architecture</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Technical Writing</span>
+                    </div>
+                </div>
+                
+                <!-- Compliance & Security -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-shield-alt text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Compliance & Security</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">GDPR</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">CCPA</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">SOC 2</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">ISO 27001</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Data Privacy</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">AI Governance</span>
+                    </div>
+                </div>
+                
+                <!-- Leadership -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-users text-yellow-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Leadership</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Cross-functional Leadership</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Mentorship</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Stakeholder Management</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Team Building</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Executive Communication</span>
+                    </div>
+                </div>
+                
+                <!-- GTM & Analytics -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-chart-bar text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">GTM & Analytics</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Market Research</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Customer Validation</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Pricing Strategy</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">KPI Tracking</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Data-driven Decisions</span>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-graduation-cap text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Education</h3>
+                    </div>
+                    <div class="space-y-2">
+                        <div>
+                            <h4 class="font-medium">University of California, Berkeley</h4>
+                            <p class="text-sm text-gray-600">B.A. Rhetoric, GPA 3.9, Highest Honors and Distinction (2014-2018)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-blue-600 text-white p-12">
+                    <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+                    <p class="mb-8 text-blue-100">
+                        Interested in discussing product opportunities, AI governance, or data privacy? 
+                        Reach out via any of the channels below.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-4 text-xl"></i>
+                            <span>federico.alan.brooks@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-4 text-xl"></i>
+                            <span>US: +1 (510) 631-5500 | IT: +39 (331) 299-3226</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin mr-4 text-xl"></i>
+                            <a href="https://www.linkedin.com/in/federico-brooks" target="_blank" class="hover:underline">linkedin.com/in/federico-brooks</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-globe mr-4 text-xl"></i>
+                            <a href="http://www.custodia-privacy.com" target="_blank" class="hover:underline">www.custodia-privacy.com</a>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <h3 class="text-xl font-semibold mb-4">Dual Citizenship</h3>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-flag-usa mr-2"></i>
+                                <span>US</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-flag mr-2"></i>
+                                <span>Swiss</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-12">
+                    <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-semibold">Federico Brooks</span>
+                    <p class="text-gray-400 mt-1">Staff Product Manager | AI & Data Privacy</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/federico-brooks" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="mailto:federico.alan.brooks@gmail.com" class="text-gray-400 hover:text-white">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Federico Brooks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                // Scroll to target
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Update active nav state
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active-nav');
+                });
+                this.classList.add('active-nav');
+            });
+        });
+
+        // Typing animation
+        const roles = ["Staff Product Manager", "AI & Data Privacy Expert", "Enterprise SaaS Leader", "0-to-1 Product Builder"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingText = document.getElementById('typing-text');
+        
+        function type() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                setTimeout(type, 1500); // Pause at end of word
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(type, 500); // Pause before typing next word
+            } else {
+                const speed = isDeleting ? 50 : 100;
+                setTimeout(type, speed);
+            }
+        }
+        
+        // Start the typing animation
+        setTimeout(type, 1000);
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Highlight active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 300) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
